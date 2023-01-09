@@ -33,7 +33,6 @@ export default function Home({data}) {
 }
 export const getServerSideProps=async()=>{
   const res=await fetch("https://api.github.com/users/mhdsadique")
-  // const res=await fetch("http://localhost:8080/home")
   const datas=await res.json()
   return{
     props:{
