@@ -36,7 +36,6 @@ const Project = ({data}) => {
 
 export const getServerSideProps=async()=>{
     const res=await fetch("https://api.github.com/search/repositories?q=user:mhdsadique+fork:true&sort=updated&per_page=10&type=Repositories")
-    // const res=await fetch(" http://localhost:8080/data")
     const datas=await res.json()
     return{
       props:{
@@ -44,4 +43,4 @@ export const getServerSideProps=async()=>{
       }
     }
   }
-export default Project
+
